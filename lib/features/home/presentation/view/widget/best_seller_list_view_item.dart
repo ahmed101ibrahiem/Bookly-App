@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../../../../core/utils/asset_data.dart';
 import '../../../../../core/utils/styls.dart';
+import 'book_rating.dart';
 
 
 class BestSellerListViewItem extends StatelessWidget {
@@ -25,27 +26,31 @@ class BestSellerListViewItem extends StatelessWidget {
             ),
           ),),
           const SizedBox(width: 30.0,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                  width: context.width*0.5,
-                  child: const Text('Harry poter and the goblet',
-                    maxLines: 2,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                    width: context.width*0.5,
+                    child: const Text('Harry poter and the goblet',
+                      maxLines: 2,
 
-                    style: Styles.textStyle20,)),
-              const SizedBox(height: 4.0,),
-              const Text('Ahmed Ibrahim',style: Styles.textStyle14,),
-              const SizedBox(height: 4.0,),
-              Row(
-                children: [
-                  Text('19.0 \$',style: Styles.textStyle20.copyWith(
-                      fontWeight: FontWeight.bold
-                  ),),
-                  const SizedBox(width: 4.0,),
-                ],
-              )
-            ],
+                      style: Styles.textStyle20,)),
+                const SizedBox(height: 4.0,),
+                const Text('Ahmed Ibrahim',style: Styles.textStyle14,),
+                const SizedBox(height: 4.0,),
+                Row(
+                  children: [
+                    Text('19.0 \$',style: Styles.textStyle20.copyWith(
+                        fontWeight: FontWeight.bold
+                    ),),
+                    const SizedBox(width: 4.0,),
+                    Spacer(),
+                    BookRating()
+                  ],
+                ),
+              ],
+            ),
           )
 
         ],
