@@ -23,7 +23,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        Get.to(() => HomeScreen(),
+        Get.to(() => const HomeScreen(),
             transition: Transition.fade, duration: kTranstionDuration);
       },
     );

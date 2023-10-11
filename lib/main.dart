@@ -1,7 +1,6 @@
 import 'package:bookly_app/features/splash_view/presentation/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'core/utils/constants.dart';
 
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: kPrimaryColor,
-      textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme)
+     // textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme)
       ),
       home: SplashScreen(),
     );
