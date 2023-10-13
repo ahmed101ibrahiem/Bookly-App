@@ -1,8 +1,6 @@
 import 'package:bookly_app/core/utils/asset_data.dart';
 import 'package:bookly_app/features/splash_view/presentation/widget/slider_text_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../../../core/utils/constants.dart';
 import '../../../home/presentation/view/screens/home_screen.dart';
@@ -23,8 +21,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        Get.to(() => const HomeScreen(),
-            transition: Transition.fade, duration: kTranstionDuration);
+        Navigator.pushNamed(context, '/homeScreen');
       },
     );
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../../../core/utils/asset_data.dart';
 import '../../../../../core/utils/styls.dart';
@@ -31,7 +30,7 @@ class BestSellerListViewItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                    width: context.width*0.5,
+                    width: MediaQuery.sizeOf(context).width*0.5,
                     child: const Text('Harry poter and the goblet',
                       maxLines: 2,
 

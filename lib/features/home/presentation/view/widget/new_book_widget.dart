@@ -1,6 +1,5 @@
 import 'package:bookly_app/core/utils/asset_data.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 
 class CustomNewBookWidget extends StatelessWidget {
@@ -13,7 +12,7 @@ class CustomNewBookWidget extends StatelessWidget {
       child: AspectRatio(
         aspectRatio: 2.7/4,
         child: Container(
-          height: context.height*0.3,
+          height: MediaQuery.sizeOf(context).height*0.3,
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(16.0)),
               color: Colors.red,

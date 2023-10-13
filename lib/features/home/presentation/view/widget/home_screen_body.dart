@@ -1,7 +1,6 @@
 import 'package:bookly_app/core/utils/asset_data.dart';
 import 'package:bookly_app/core/utils/styls.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import 'belst_seller_list_view.dart';
 import 'best_seller_list_view_item.dart';
