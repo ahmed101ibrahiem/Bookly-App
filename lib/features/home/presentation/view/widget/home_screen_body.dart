@@ -23,7 +23,7 @@ class HomeScreenBody extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 15.0),
                 child: CustomAppBar(),
               ),
-              CustomBookListH(),
+              CustomBookList(),
               SizedBox(
                 height: 50,
               ),

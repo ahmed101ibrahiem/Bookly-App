@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'new_book_widget.dart';
 
-class CustomBookListH extends StatelessWidget {
-  const CustomBookListH({Key? key}) : super(key: key);
+class CustomBookList extends StatelessWidget {
+  const CustomBookList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
