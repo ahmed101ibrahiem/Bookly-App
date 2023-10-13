@@ -2,11 +2,15 @@ import 'package:bookly_app/core/utils/styls.dart';
 import 'package:flutter/material.dart';
 
 class BookRating extends StatelessWidget {
-  const BookRating({Key? key}) : super(key: key);
+   BookRating({Key? key,
+    this.mainAxisAlignments=MainAxisAlignment.start
+  }) : super(key: key);
 
+   MainAxisAlignment mainAxisAlignments;
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: mainAxisAlignments,
       children: [
         Icon(Icons.star,color: Colors.yellow,),
         SizedBox(width: 5.0,),

@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
      // textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme)
       ),
       routes: Routes.routes,
-     initialRoute: Routes.bookDetailsView,
+     initialRoute: '/',
     );
   }
 }

@@ -9,7 +9,7 @@ abstract class Routes{
    static String homeScreen = '/homeScreen';
    static String bookDetailsView = '/bookDetailsView';
   static var routes =  {
- // '/':(BuildContext context)=>SplashScreen(),
+  '/':(BuildContext context)=>SplashScreen(),
   homeScreen:(BuildContext context)=>HomeScreen(),
     bookDetailsView:(BuildContext context)=>BookDetailsView(),
   };
