@@ -17,7 +17,7 @@ class BestSellerListViewItem extends StatelessWidget {
         onTap:() =>  Navigator.pushNamed(context, Routes.bookDetailsView),
         child: Row(
           children: [
-            AspectRatio(aspectRatio: 2.5/4,child: Container(
+            AspectRatio(aspectRatio: 2.6/4,child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   color: Colors.red,

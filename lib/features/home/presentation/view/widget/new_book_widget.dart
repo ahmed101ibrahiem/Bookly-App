@@ -8,9 +8,9 @@ class CustomNewBookWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 4),
       child: AspectRatio(
-        aspectRatio: 2.7/4,
+        aspectRatio: 2.6/4,
         child: Container(
           height: MediaQuery.sizeOf(context).height*0.3,
           decoration: const BoxDecoration(
