@@ -1,18 +1,19 @@
 class IndustryIdentifier {
-  String? type;
-  String? identifier;
+  String type;
+  String identifier;
 
-  IndustryIdentifier({this.type, this.identifier});
+  IndustryIdentifier({
+    required this.type,
+    required this.identifier,
+  });
 
-  factory IndustryIdentifier.fromJson(Map<String, dynamic> json) {
-    return IndustryIdentifier(
-      type: json['type'] as String?,
-      identifier: json['identifier'] as String?,
-    );
-  }
+  factory IndustryIdentifier.fromJson(Map<String, dynamic> json) => IndustryIdentifier(
+    type: json["type"],
+    identifier: json["identifier"],
+  );
 
   Map<String, dynamic> toJson() => {
-        'type': type,
-        'identifier': identifier,
-      };
+    "type": type,
+    "identifier": identifier,
+  };
 }
