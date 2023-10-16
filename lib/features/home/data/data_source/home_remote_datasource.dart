@@ -1,7 +1,9 @@
 
 
 import 'package:bookly_app/core/utils/api_service.dart';
+import 'package:bookly_app/core/utils/constants.dart';
 import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
+import '../../../../core/utils/functions/save_books.dart';
 import '../../domain/entities/book_entity.dart';
 
 abstract class HomeRemoteDataSource{
@@ -21,8 +23,10 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource{
    for(var bookMap in data['items']){
      books.add(BookModel.fromJson(bookMap));
    }
+   saveBooksData(books,kFeaturedBox);
    return books;
   }
+
 
   @override
   Future<List<BookEntity>> fetchNewestBooks() async{
