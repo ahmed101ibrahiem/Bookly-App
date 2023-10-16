@@ -1,12 +1,14 @@
-import 'package:bookly_app/features/home/presentation/view/screens/home_screen.dart';
-import 'package:bookly_app/features/splash_view/presentation/screens/splash_screen.dart';
+import 'package:bookly_app/features/home/domain/entities/book_entity.dart';
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'core/utils/app_routes.dart';
 import 'core/utils/constants.dart';
-import 'features/home/presentation/view/screens/book_details_view.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
+
+  Hive.registerAdapter(BookEntityAdapter());
+  await Hive.openBox(kFeaturedBox);
 }
 
 class MyApp extends StatelessWidget {
@@ -16,11 +18,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: kPrimaryColor,
-     // textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme)
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: kPrimaryColor,
+        // textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme)
       ),
       routes: Routes.routes,
-     initialRoute: '/',
+      initialRoute: '/',
     );
   }
 }
