@@ -1,5 +1,3 @@
-
-
 import 'package:dio/dio.dart';
 
 abstract class Failure{
@@ -44,6 +42,5 @@ abstract class Failure{
       return ServerFailure('There was an error please try again');
     }
   }
-
  }
 
