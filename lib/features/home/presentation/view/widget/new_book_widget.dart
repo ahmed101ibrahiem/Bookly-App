@@ -13,10 +13,11 @@ class CustomNewBookWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 4),
       child: AspectRatio(
         aspectRatio: 2.6/4,
-        child: CachedNetworkImage(imageUrl:urlImage
+        child: ClipRRect(
+            borderRadius: BorderRadius.circular(16.0),
+            child:CachedNetworkImage(imageUrl:urlImage
           ,fit: BoxFit.fill
-          ,imageBuilder: (context, imageProvider) =>
-              Image.asset('assets/images/test_image.png'),)
+          ,))
       ),
     );
   }

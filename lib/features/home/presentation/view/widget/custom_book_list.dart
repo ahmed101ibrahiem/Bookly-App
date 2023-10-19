@@ -13,7 +13,7 @@ class CustomBookList extends StatelessWidget {
     return SizedBox(
       height: context.height *0.3,
       child: ListView.builder(
-        itemCount: 16,
+        itemCount: books.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) =>  CustomNewBookWidget(urlImage: books[index].image!),),
     );

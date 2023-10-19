@@ -16,7 +16,7 @@ class SearchResultListView extends StatelessWidget {
         return
            Padding(
             padding:  const EdgeInsets.symmetric(vertical: 10.0),
-            child:  BestSellerListViewItem(imgUrl: ''),
+            child:  BestSellerListViewItem(),
           );
 
       },

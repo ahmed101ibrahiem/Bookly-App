@@ -10,14 +10,15 @@ class BestSellerListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics:  NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      physics:  const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.zero,
-      itemCount: 10,
+      itemCount: books.length,
       itemBuilder: (context, index) {
         return
             Padding(
-             padding:  EdgeInsets.symmetric(vertical: 10.0),
-             child:  BestSellerListViewItem(imgUrl: books[index].image!),
+             padding:  const EdgeInsets.symmetric(vertical: 10.0),
+             child:  BestSellerListViewItem(book: books[index]),
            );
 
       },
