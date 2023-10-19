@@ -14,9 +14,9 @@ class DetailsBookListView extends StatelessWidget {
       child: ListView.builder(
         itemCount: 16,
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const Padding(
+        itemBuilder: (context, index) =>  Padding(
           padding:  EdgeInsets.symmetric(horizontal: 4.0),
-          child:  CustomNewBookWidget(),
+          child:  CustomNewBookWidget(urlImage: ''),
         ),),
     );
   }

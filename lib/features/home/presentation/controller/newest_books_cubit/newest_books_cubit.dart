@@ -7,7 +7,7 @@ class NewestBookCubit extends Cubit<NewestBookState>{
   final FetchNewestBooksUseCase fetchNewestBooksUseCase;
   NewestBookCubit({required this.fetchNewestBooksUseCase}):super(NewestBookInitial());
 
-  Future<void> getFeaturedData()async{
+  Future<void> getNewestData()async{
     emit(NewestBookLoading());
     var response = await fetchNewestBooksUseCase.call();
     response.fold((failure) {

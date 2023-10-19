@@ -35,11 +35,11 @@ class MyApp extends StatelessWidget {
       BlocProvider(create: (context) => FeaturedBookCubit(
           featuredBooksUseCase: FetchFeaturedBooksUseCase(
             homeRepo: getIt.get<HomeReposImpl>()
-          )),),
+          ))..getFeaturedData(),),
       BlocProvider(create: (context) => NewestBookCubit(
           fetchNewestBooksUseCase: FetchNewestBooksUseCase(
                getIt.get<HomeReposImpl>()
-          )),),
+          ))..getNewestData(),),
     ],
         child: MaterialApp(
 

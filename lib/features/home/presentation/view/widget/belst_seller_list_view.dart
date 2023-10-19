@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 
+import '../../../domain/entities/book_entity.dart';
 import 'best_seller_list_view_item.dart';
 
 class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({Key? key}) : super(key: key);
+  const BestSellerListView({Key? key,required this.books}) : super(key: key);
 
+  final List<BookEntity> books;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: const NeverScrollableScrollPhysics(),
+      physics:  NeverScrollableScrollPhysics(),
       padding: EdgeInsets.zero,
       itemCount: 10,
       itemBuilder: (context, index) {
         return
-           const Padding(
+            Padding(
              padding:  EdgeInsets.symmetric(vertical: 10.0),
-             child:  BestSellerListViewItem(),
+             child:  BestSellerListViewItem(imgUrl: books[index].image!),
            );
 
       },

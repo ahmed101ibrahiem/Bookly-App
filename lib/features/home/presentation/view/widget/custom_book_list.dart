@@ -1,11 +1,13 @@
 import 'package:bookly_app/core/media_quary/media_quary_value.dart';
 import 'package:flutter/material.dart';
 
+import '../../../domain/entities/book_entity.dart';
 import 'new_book_widget.dart';
 
 class CustomBookList extends StatelessWidget {
-  const CustomBookList({Key? key}) : super(key: key);
+   CustomBookList({Key? key,required this.books}) : super(key: key);
 
+  final List<BookEntity> books;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -13,7 +15,7 @@ class CustomBookList extends StatelessWidget {
       child: ListView.builder(
         itemCount: 16,
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const CustomNewBookWidget(),),
+        itemBuilder: (context, index) =>  CustomNewBookWidget(urlImage: books[index].image!),),
     );
   }
 }

@@ -4,7 +4,7 @@ import '../../../../home/presentation/view/widget/best_seller_list_view_item.dar
 
 
 class SearchResultListView extends StatelessWidget {
-  const SearchResultListView({Key? key}) : super(key: key);
+   SearchResultListView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +14,9 @@ class SearchResultListView extends StatelessWidget {
       itemCount: 10,
       itemBuilder: (context, index) {
         return
-          const Padding(
-            padding:  EdgeInsets.symmetric(vertical: 10.0),
-            child:  BestSellerListViewItem(),
+           Padding(
+            padding:  const EdgeInsets.symmetric(vertical: 10.0),
+            child:  BestSellerListViewItem(imgUrl: ''),
           );
 
       },

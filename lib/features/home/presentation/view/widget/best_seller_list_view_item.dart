@@ -1,14 +1,14 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../../core/utils/app_routes.dart';
-import '../../../../../core/utils/asset_data.dart';
 import '../../../../../core/utils/styls.dart';
 import 'book_rating.dart';
 
 
 class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({Key? key}) : super(key: key);
+   BestSellerListViewItem({Key? key,required this.imgUrl}) : super(key: key);
 
+  final String imgUrl ;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -17,15 +17,9 @@ class BestSellerListViewItem extends StatelessWidget {
         onTap:() =>  Navigator.pushNamed(context, Routes.bookDetailsView),
         child: Row(
           children: [
-            AspectRatio(aspectRatio: 2.6/4,child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  color: Colors.red,
-                  image: const DecorationImage(
-                      fit: BoxFit.fill,
-                      image: AssetImage(AssetsData.testImgPath)
-                  )
-              ),
+            AspectRatio(aspectRatio: 2.6/4,child: CachedNetworkImage(
+              imageUrl: imgUrl,
+              fit: BoxFit.fill,
             ),),
             const SizedBox(width: 30.0,),
             Expanded(
