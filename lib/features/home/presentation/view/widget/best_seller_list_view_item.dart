@@ -40,7 +40,7 @@ class BestSellerListViewItem extends StatelessWidget {
                   const SizedBox(height: 4.0,),
                   Row(
                     children: [
-                      Text('19.0 \$',style: Styles.textStyle20.copyWith(
+                      Text('${book?.price}'??'',style: Styles.textStyle20.copyWith(
                           fontWeight: FontWeight.bold
                       ),),
                       const SizedBox(width: 4.0,),

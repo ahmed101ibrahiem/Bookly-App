@@ -11,7 +11,10 @@ import 'package:get_it/get_it.dart';
 final getIt = GetIt.instance;
 
 void setupServiceLocator(){
-  getIt.registerSingleton<ApiService>(ApiService(Dio()));
+  getIt.registerSingleton<ApiService>(ApiService(Dio(BaseOptions(
+    receiveDataWhenStatusError: true,
+    receiveTimeout:  Duration(seconds: 5),
+      connectTimeout: Duration(seconds: 5)))));
   getIt.registerSingleton<HomeReposImpl>(HomeReposImpl(
       homeLocalDataSource: HomeLocalDataSourceImpl(),
       homeRemoteDataSource: HomeRemoteDataSourceImpl(getIt.get<ApiService>())));
